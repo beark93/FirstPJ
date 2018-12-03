@@ -10,6 +10,7 @@ class View extends CI_Controller {
         
 	public function index()
 	{
+            phpinfo();
             $this->load->view('main/index');
 	}
 }
