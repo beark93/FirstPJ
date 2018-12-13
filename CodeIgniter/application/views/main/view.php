@@ -15,16 +15,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             .main-width .main-banner .main-sub {font-family: 'Jua', sans-serif; color: #ffffff; font-size:15px;}
             .main-width .main-content {float:left; margin-bottom:10px; width:100%; height:600px; position:relative;}
             .main-width .main-content .tab-line{float:left; width:100%; height:10%; background-color:#eeeeee; position:relative; cursor: pointer;}
-            .main-width .main-content .tab-line .tab{float:left; width:25%; height:100%;}
+            .main-width .main-content .tab-line .tab{float:left; width:25%; height:100%; padding-top:20px; text-align: center; box-sizing: border-box;}
             .main-width .main-content .tab-line .tab1{background-color:#FFAF0A;}
             .main-width .main-content .tab-line .tab2{background-color:#D27D32;}
             .main-width .main-content .tab-line .tab3{background-color:#5F9EA0;}
             .main-width .main-content .tab-line .tab4{background-color:#8c8c8c;}
+            .main-width .main-content .tab-line .tab-name{font-family: 'Jua', sans-serif; color: #000000; font-size:20px;}
             .main-width .main-content .content-line{float:left; width:100%; height:90%; position:relative;}
-            .main-width .main-content .content-line .content{width:100%; height:100%; display:none;}
+            .main-width .main-content .content-line .content{width:100%; height:100%; display:none; box-sizing: border-box;}
             .main-width .main-content .content-line .active{display:block;}
+            .main-width .main-content .content-line .content .big-font{font-family: 'Jua', sans-serif; color: #f50057; font-size:100px;}
             .main-width .main-content .content-line .content1{background-color:#FFAF0A;}
             .main-width .main-content .content-line .content2{background-color:#D27D32;}
+            .main-width .main-content .content-line .content2 .love{height:100px; position:relative; width:268.05px; margin:0 auto; padding-top:220px; box-sizing: border-box;}
             .main-width .main-content .content-line .content3{background-color:#5F9EA0;}
             .main-width .main-content .content-line .content4{background-color:#8c8c8c;}
         </style>
@@ -38,17 +41,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class='main-content'>
                 <div class='tab-line'>
-                    <div class='tab tab1' idx='1'></div>
-                    <div class='tab tab2' idx='2'></div>
-                    <div class='tab tab3' idx='3'></div>
-                    <div class='tab tab4' idx='4'></div>
+                    <div class='tab tab1' idx='1'>
+                        
+                    </div>
+                    <div class='tab tab2' idx='2'>
+                        <font class='tab-name'>유나야<font>
+                    </div>
+                    <div class='tab tab3' idx='3'>
+                        
+                    </div>
+                    <div class='tab tab4' idx='4'>
+                        
+                    </div>
                 </div>
                 <div class='content-line'>
                     <div class='content content1 active' idx='1'>
                         
                     </div>
                     <div class='content content2' idx='2'>
-                        
+                        <?= $content1 ?>
                     </div>
                     <div class='content content3' idx='3'>
                         
