@@ -22,14 +22,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             .main-width .main-content .tab-line .tab4{background-color:#8c8c8c;}
             .main-width .main-content .tab-line .tab-name{font-family: 'Jua', sans-serif; color: #000000; font-size:20px;}
             .main-width .main-content .content-line{float:left; width:100%; height:90%; position:relative;}
-            .main-width .main-content .content-line .content{width:100%; height:100%; display:none; box-sizing: border-box;}
+            .main-width .main-content .content-line .content{width:100%; height:100%; display:none; box-sizing: border-box; position:relative;}
             .main-width .main-content .content-line .active{display:block;}
             .main-width .main-content .content-line .content .big-font{font-family: 'Jua', sans-serif; color: #f50057; font-size:100px;}
-            .main-width .main-content .content-line .content1{background-color:#FFAF0A;}
-            .main-width .main-content .content-line .content2{background-color:#D27D32;}
-            .main-width .main-content .content-line .content2 .love{height:100px; position:relative; width:268.05px; margin:0 auto; padding-top:220px; box-sizing: border-box;}
-            .main-width .main-content .content-line .content3{background-color:#5F9EA0;}
-            .main-width .main-content .content-line .content4{background-color:#8c8c8c;}
+            .main-width .main-content .content-line .content1{background-color:#FFAF0A; overflow-y:scroll;}
+            .main-width .main-content .content-line .content2{background-color:#D27D32; overflow-y:scroll;}
+            .main-width .main-content .content-line .content2 .love{height:320px; position:relative; width:268.5px; margin:0 auto; padding-top:220px; box-sizing: border-box;}
+            .main-width .main-content .content-line .content3{background-color:#5F9EA0; overflow-y:scroll;}
+            .main-width .main-content .content-line .content4{background-color:#8c8c8c; overflow-y:scroll;}
+            .main-width .main-content .content-line .content-sub{width:100%; height:100%; position:relative;}
         </style>
     </head>
     <body>
@@ -56,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div class='content-line'>
                     <div class='content content1 active' idx='1'>
-                        
+                        <?= $content2 ?>
                     </div>
                     <div class='content content2' idx='2'>
                         <?= $content1 ?>
