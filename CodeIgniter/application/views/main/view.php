@@ -6,6 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <head>
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/jquery.mCustomScrollbar.css" />
+        <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <style>
             html, body {height: 100%;}
             body {background-color:#343434; margin:0;}
@@ -25,12 +27,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             .main-width .main-content .content-line .content{width:100%; height:100%; display:none; box-sizing: border-box; position:relative;}
             .main-width .main-content .content-line .active{display:block;}
             .main-width .main-content .content-line .content .big-font{font-family: 'Jua', sans-serif; color: #f50057; font-size:100px;}
-            .main-width .main-content .content-line .content1{background-color:#FFAF0A; overflow-y:scroll;}
-            .main-width .main-content .content-line .content2{background-color:#D27D32; overflow-y:scroll;}
+            .main-width .main-content .content-line .content1{background-color:#FFAF0A; padding:15px; box-sizing: border-box;}
+            .main-width .main-content .content-line .content2{background-color:#D27D32; padding:15px; box-sizing: border-box;}
             .main-width .main-content .content-line .content2 .love{height:320px; position:relative; width:268.5px; margin:0 auto; padding-top:220px; box-sizing: border-box;}
-            .main-width .main-content .content-line .content3{background-color:#5F9EA0; overflow-y:scroll;}
-            .main-width .main-content .content-line .content4{background-color:#8c8c8c; overflow-y:scroll;}
+            .main-width .main-content .content-line .content3{background-color:#5F9EA0; padding:15px; box-sizing: border-box;}
+            .main-width .main-content .content-line .content4{background-color:#8c8c8c; padding:15px; box-sizing: border-box;}
             .main-width .main-content .content-line .content-sub{width:100%; height:100%; position:relative;}
+
         </style>
     </head>
     <body>
@@ -43,30 +46,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class='main-content'>
                 <div class='tab-line'>
                     <div class='tab tab1' idx='1'>
-                        
+
                     </div>
                     <div class='tab tab2' idx='2'>
                         <font class='tab-name'>유나야<font>
                     </div>
                     <div class='tab tab3' idx='3'>
-                        
+
                     </div>
                     <div class='tab tab4' idx='4'>
-                        
+
                     </div>
                 </div>
                 <div class='content-line'>
-                    <div class='content content1 active' idx='1'>
+                    <div class='content content1 active' data-mcs-theme="minimal-dark" idx='1'>
                         <?= $content2 ?>
                     </div>
-                    <div class='content content2' idx='2'>
+                    <div class='content content2' data-mcs-theme="minimal-dark" idx='2'>
                         <?= $content1 ?>
                     </div>
-                    <div class='content content3' idx='3'>
-                        
+                    <div class='content content3' data-mcs-theme="minimal-dark" idx='3'>
+
                     </div>
-                    <div class='content content4' idx='4'>
-                        
+                    <div class='content content4' data-mcs-theme="minimal-dark" idx='4'>
+
                     </div>
                 </div>
             </div>
@@ -92,6 +95,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $('.content' + idx).addClass('active');
                 }
             });
+
+            (function ($) {
+                $(window).on("load", function () {
+                    $(".content1").mCustomScrollbar();
+                    $(".content2").mCustomScrollbar();
+                    $(".content3").mCustomScrollbar();
+                    $(".content4").mCustomScrollbar();
+                });
+            })(jQuery);
+
         </script>
     </body>
 </html>
